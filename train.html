@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Тренер - Создать программу</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Шапка -->
+    <header>
+        <nav>
+            <div class="logo">AI<span>Fitness</span></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="train.html" class="active">Тренируйся с AI</a></li>
+                <li><button id="theme-toggle">Тёмная</button></li>
+            </ul>
+            <div class="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Основной контент -->
+    <main>
+        <!-- Форма генерации -->
+        <section class="fullscreen ai-generator">
+            <div class="container">
+                <h1 class="animate">Создайте идеальную тренировку</h1>
+                
+                <form id="ai-form" class="animate-delay-1">
+                    <div class="form-group">
+                        <label for="goal">Ваша цель</label>
+                        <select id="goal" name="goal" required>
+                            <option value="" disabled selected>Выберите цель</option>
+                            <option value="weight_loss">Похудение</option>
+                            <option value="muscle_gain">Набор мышечной массы</option>
+
+                            <option value="general">Общее оздоровление</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="level">Ваш уровень</label>
+                        <select id="level" name="level" required>
+                            <option value="" disabled selected>Выберите уровень</option>
+                            <option value="beginner">Начинающий (0-6 мес.)</option>
+                            <option value="intermediate">Средний (6 мес.-2 года)</option>
+                            <option value="advanced">Продвинутый (2+ года)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="equipment">Оборудование</label>
+                        <select id="equipment" name="equipment">
+                            <option value="none">Нет оборудования</option>
+                            <option value="minimal">Минимум (гантели, коврик)</option>
+                            <option value="full">Полный набор</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="cta-button">
+                        <span class="button-text">Сгенерировать план</span>
+                        <span class="loading-spinner hidden"></span>
+                    </button>
+                </form>
+
+                <div id="ai-result" class="animate-delay-2"></div>
+            </div>
+        </section>
+    </main>
+
+    <script src="index.js"></script>
+</body>
+</html>
